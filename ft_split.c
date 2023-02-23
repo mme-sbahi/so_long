@@ -6,7 +6,7 @@
 /*   By: mmesbahi <mmesbahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 18:07:50 by mmesbahi          #+#    #+#             */
-/*   Updated: 2023/02/16 18:18:20 by mmesbahi         ###   ########.fr       */
+/*   Updated: 2023/02/22 22:08:49 by mmesbahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	ft_lenght_str(const char *str, char c, int h)
 	return (len);
 }
 
-static char	**ft_free(char **str, int i)
+char	**ft_free(char **str, int i)
 {
 	while (i)
 	{

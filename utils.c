@@ -6,32 +6,16 @@
 /*   By: mmesbahi <mmesbahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 17:54:11 by mmesbahi          #+#    #+#             */
-/*   Updated: 2023/02/18 14:43:43 by mmesbahi         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:33:04 by mmesbahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-char	*ft_strdup(char *source)
-{
-	char	*p;
-	int		i;
 
-	p = (char *)malloc(ft_strlen(source) + 1 * sizeof(char));
-	if (p == NULL)
-		return (NULL);
-	i = 0;
-	while (source[i])
-	{
-		p[i] = source[i];
-		i++;
-	}
-	p[i] = '\0';
-	return (p);
-}
-char	*ft_substr( char *s, unsigned int start, size_t len)
+char	*ft_substr( char *s,int start, int len)
 {
 	char	*sub;
-	size_t	i;
+	int	i;
 
 	i = 0;
 	if (!s)
@@ -68,7 +52,6 @@ void	ft_putstr(char *s)
 		write (2, &s[i], 1);
 		i++;
 	}
-	exit(1);
 }
 
 int	ft_strcohr(char *s, char c)

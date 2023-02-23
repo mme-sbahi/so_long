@@ -119,6 +119,7 @@ void draw_map_0(t_ptr *data)
     int j;
     int x;
     int y;
+    
     i = 0;
     j = 0;
     x = 0;
