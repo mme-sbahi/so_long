@@ -6,7 +6,7 @@
 #    By: mmesbahi <mmesbahi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 16:01:05 by mmesbahi          #+#    #+#              #
-#    Updated: 2023/02/22 21:59:19 by mmesbahi         ###   ########.fr        #
+#    Updated: 2023/02/24 19:03:45 by mmesbahi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ RM = rm -rf
 SRC = check_map.c draw.c ft_putnbr_fd.c ft_split.c \
 		get_next_line.c get_next_line_utils.c \
 		moves.c utils.c valid_path.c so_long.c \
-		utils_2.c
+		utils_2.c utils_3.c 
 
 OBJ = $(SRC:.c=.o)
 

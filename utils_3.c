@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   utils_3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmesbahi <mmesbahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 10:48:43 by mmesbahi          #+#    #+#             */
-/*   Updated: 2023/02/24 15:55:06 by mmesbahi         ###   ########.fr       */
+/*   Created: 2023/02/24 18:58:46 by mmesbahi          #+#    #+#             */
+/*   Updated: 2023/02/24 19:04:33 by mmesbahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static void	ft_putchar_fd(int c, int fd)
+void	ft_check_one(t_ptr	*data)
 {
-	write(fd, &c, 1);
-}
+	int	i;
+	int	j;
 
-void	ft_putnbr_fd(int nb, int fd)
-{
-	long int	n;
-
-	n = nb;
-	if (n < 0)
+	i = 0;
+	j = 0;
+	while (data->tab[0][i])
 	{
-		n *= -1;
-		ft_putchar_fd('-', fd);
+		if (data->tab[0][i] != '1')
+			ft_error("map non valid\n", data->tab);
+		i++;
 	}
-	if (n >= 0 && n <= 9)
-		ft_putchar_fd(n + 48, fd);
-	if (n >= 10)
+	i = 0;
+	while (data->tab[j])
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		j++;
+	}
+	while (data->tab[j - 1][i])
+	{
+		if (data->tab[j - 1][i] != '1')
+			ft_error("map non valid \n", data->tab);
+		i++;
 	}
 }

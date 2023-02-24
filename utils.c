@@ -6,16 +6,16 @@
 /*   By: mmesbahi <mmesbahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 17:54:11 by mmesbahi          #+#    #+#             */
-/*   Updated: 2023/02/23 12:33:04 by mmesbahi         ###   ########.fr       */
+/*   Updated: 2023/02/24 19:16:13 by mmesbahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-char	*ft_substr( char *s,int start, int len)
+char	*ft_substr(char *s, int start, int len)
 {
 	char	*sub;
-	int	i;
+	int		i;
 
 	i = 0;
 	if (!s)
@@ -40,6 +40,7 @@ char	*ft_substr( char *s,int start, int len)
 	sub[i] = '\0';
 	return (sub);
 }
+
 void	ft_putstr(char *s)
 {
 	int	i;
@@ -89,6 +90,7 @@ char	*ft_strtrim(char *s1, char *set)
 	}
 	return (ft_substr(s1, i, j + 1 - i));
 }
+
 int	ft_strcmp(char *first, char *second)
 {
 	int	i;
@@ -98,4 +100,3 @@ int	ft_strcmp(char *first, char *second)
 		i++;
 	return ((unsigned char)first[i] - (unsigned char)second[i]);
 }
-
